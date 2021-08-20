@@ -1,0 +1,5 @@
+/hello-world/node_modules/
+/goodbye-world/node_modules/
+*.docx
+*.pdf
+

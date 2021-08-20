@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goodbye-world
+  labels:
+    app: goodbye-world
+spec:
+  selector:
+    matchLabels:
+      app: goodbye-world
+  template:
+    metadata:
+      name: goodbye-world
+      labels:
+        app: goodbye-world
+    spec:
+      containers:
+        - name: goodbye-world
+          image: goodbye-world
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080

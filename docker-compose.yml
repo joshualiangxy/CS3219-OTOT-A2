@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  reverse-proxy:
+    image: reverse-proxy
+    build:
+      context: .
+    container_name: reverse-proxy
+    depends_on:
+      - hello-world
+      - goodbye-world
+    ports:
+      - 8080:80
+    restart: on-failure
+
+  hello-world:
+    image: hello-world
+    container_name: hello-world
+    build:
+      context: ./hello-world
+    ports:
+      - 8081:8080
+    restart: on-failure
+
+  goodbye-world:
+    image: goodbye-world
+    container_name: goodbye-world
+    build:
+      context: ./goodbye-world
+    ports:
+      - 8082:8080
+    restart: on-failure
