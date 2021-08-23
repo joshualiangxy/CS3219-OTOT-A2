@@ -1,4 +1,4 @@
-# CS3219 Task A1
+# CS3219 Task A2
 
 ## Running the app
 1. Build the docker images using the following command at the root of the code base.
