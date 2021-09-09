@@ -2,7 +2,7 @@ version: '3'
 
 services:
   reverse-proxy:
-    image: reverse-proxy
+    image: joshualiangxy/reverse-proxy
     build:
       context: .
     container_name: reverse-proxy
@@ -14,8 +14,9 @@ services:
     restart: on-failure
 
   hello-world:
-    image: hello-world
+    image: joshualiangxy/hello-world
     container_name: hello-world
+    hostname: hello-world-service
     build:
       context: ./hello-world
     ports:
@@ -23,8 +24,9 @@ services:
     restart: on-failure
 
   goodbye-world:
-    image: goodbye-world
+    image: joshualiangxy/goodbye-world
     container_name: goodbye-world
+    hostname: goodbye-world-service
     build:
       context: ./goodbye-world
     ports:

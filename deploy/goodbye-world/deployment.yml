@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: goodbye-world
-          image: goodbye-world
-          imagePullPolicy: Never
+          image: joshualiangxy/goodbye-world
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
